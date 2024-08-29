@@ -1,64 +1,69 @@
 import React from 'react';
-import 'react-responsive-carousel/lib/styles/carousel.min.css'; // Import the carousel styles
-import { Carousel } from 'react-responsive-carousel';
-import { FaArrowLeft, FaArrowRight } from 'react-icons/fa'; // Import arrow icons
-import cisco from '../assets/certificates/cisco.png';
-import cybersecurity from '../assets/certificates/cybersecurity.png';
-import mta from '../assets/certificates/mta.png';
-import networksecurity from '../assets/certificates/networksecurity.png';
+import xyz1 from '../assets/projects/xyz1.png';
+import xyz2 from '../assets/projects/xyz2.png';
+import cirrhosis1 from '../assets/projects/cirrhosis1.png';
+import cirrhosis2 from '../assets/projects/cirrhosis2.png';
+import kodigz from '../assets/projects/kodigz.png';
+import ToDoList from '../assets/projects/ToDoList.png';
+import wqma from '../assets/projects/wqma.png';
 
-const Certificates = () => {
+const Projects = () => {
   return (
-    <div className="flex flex-col items-center justify-center h-screen mt-0 overflow-hidden">
-      <h2 className="text-3xl font-semibold mb-8 fixed top-24">Certificates</h2> {/* Adjusted top position */}
-      <div className="w-full max-w-4xl text-center relative mt-40"> {/* Adjusted margin-top for spacing */}
-        <Carousel
-          showThumbs={false}
-          showStatus={false}
-          infiniteLoop
-          useKeyboardArrows
-          className="carousel-container"
-          renderArrowPrev={(clickHandler, hasPrev, labelPrev) =>
-            hasPrev && (
-              <button
-                type="button"
-                onClick={clickHandler}
-                className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-700 bg-opacity-50 hover:bg-opacity-75 text-white p-2 rounded-full ml-2 z-10"
-                aria-label={labelPrev}
-              >
-                <FaArrowLeft size={30} />
-              </button>
-            )
-          }
-          renderArrowNext={(clickHandler, hasNext, labelNext) =>
-            hasNext && (
-              <button
-                type="button"
-                onClick={clickHandler}
-                className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-700 bg-opacity-50 hover:bg-opacity-75 text-white p-2 rounded-full mr-2 z-10"
-                aria-label={labelNext}
-              >
-                <FaArrowRight size={30} />
-              </button>
-            )
-          }
-        >
-          <div>
-            <img src={cisco} alt="Cisco Certificate" className="cursor-pointer max-h-[440px] object-contain" onClick={() => window.open(cisco, '_blank')} />
-          </div>
-          <div>
-            <img src={cybersecurity} alt="Cybersecurity Certificate" className="cursor-pointer max-h-[440px] object-contain" onClick={() => window.open(cybersecurity, '_blank')} />
-          </div>
-          <div>
-            <img src={mta} alt="MTA Certificate" className="cursor-pointer max-h-[440px] object-contain" onClick={() => window.open(mta, '_blank')} />
-          </div>
-          <div>
-            <img src={networksecurity} alt="Networking Security Certificate" className="cursor-pointer max-h-[440px] object-contain" onClick={() => window.open(networksecurity, '_blank')} />
-          </div>
-        </Carousel>
+    <div className="flex flex-col items-center justify-start h-auto mt-0 overflow-hidden p-6">
+      <h2 className="text-3xl font-semibold mb-8">Projects</h2>
+
+      {/* Project 1 */}
+      <div className="max-w-4xl mb-12">
+        <h3 className="text-2xl font-bold">Sales and Inventory System of XYZ Company</h3>
+        <p className="mb-4">
+          In this online website, it used PHP to create the dashboard, which displays two pictures and highlights the basic functionalities for the user.
+        </p>
+        <div className="flex justify-center space-x-4">
+          <img src={xyz1} alt="Sales and Inventory System 1" className="max-h-[300px] object-contain" />
+          <img src={xyz2} alt="Sales and Inventory System 2" className="max-h-[300px] object-contain" />
+        </div>
+      </div>
+
+      {/* Project 2 */}
+      <div className="max-w-4xl mb-12">
+        <h3 className="text-2xl font-bold">Cirrhosis Prediction Dataset</h3>
+        <p className="mb-4">
+          In this dataset, it used the Exploratory tool to replace NA values and display graphs, while Orange was used for analyzing the problem through the Test and Score, Confusion Matrix, and Prediction Test.
+        </p>
+        <div className="flex justify-center space-x-4">
+          <img src={cirrhosis1} alt="Cirrhosis Prediction Dataset 1" className="max-h-[300px] object-contain" />
+          <img src={cirrhosis2} alt="Cirrhosis Prediction Dataset 2" className="max-h-[300px] object-contain" />
+        </div>
+      </div>
+
+      {/* Project 3 */}
+      <div className="max-w-4xl mb-12 text-center"> {/* Centering the content */}
+        <h3 className="text-2xl font-bold">Kodigz</h3>
+        <p className="mb-4">
+          In this mobile app, it used the Kotlin language to serve as a convenient note-taking tool designed for casual users who want to keep track of information. It allows users to record, write, or jot down notes.
+        </p>
+        <img src={kodigz} alt="Kodigz" className="max-h-[300px] object-contain mx-auto" /> {/* Centered */}
+      </div>
+
+      {/* Project 4 */}
+      <div className="max-w-4xl mb-12 text-center"> {/* Centering the content */}
+        <h3 className="text-2xl font-bold">Water Quality Monitoring System</h3>
+        <p className="mb-4">
+          In this online water quality report monitoring system, we used Laravel Blade for both the front end and back end. The database for the system is managed using XAMPP, and our hosting provider for the domain is Hostinger.
+        </p>
+        <img src={wqma} alt="Water Quality Monitoring System" className="max-h-[300px] object-contain mx-auto" /> {/* Centered */}
+      </div>
+
+      {/* Project 5 */}
+      <div className="max-w-4xl mb-12 text-center"> {/* Centering the content */}
+        <h3 className="text-2xl font-bold">To Do List</h3>
+        <p className="mb-4">
+          In this To Do List application, I used JavaScript for the functionalities and Bootstrap for the design. It can create, edit, and delete a task.
+        </p>
+        <img src={ToDoList} alt="To Do List" className="max-h-[300px] object-contain mx-auto" /> {/* Centered */}
       </div>
     </div>
   );
 };
 
-export default Certificates;
+export default Projects;
